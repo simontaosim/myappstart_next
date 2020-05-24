@@ -2,6 +2,7 @@ import WelcomePage from '../components/pages'
 import { useEffect } from 'react'
 import dataProvider from '../services/dataProvider'
 import { IPageProps } from '../components/PropInterfaces'
+import { userProfileState } from '../reducers/initialStates'
 const IndexPage = (props: IPageProps) => {
   const {appState, appDispatch } = props;
   useEffect(()=>{
@@ -20,7 +21,7 @@ const IndexPage = (props: IPageProps) => {
     })
   })
   return (
-    <WelcomePage posts={[]} appState={appState} appDispatch={appDispatch}  />
+    <WelcomePage posts={[]} appState={appState} appDispatch={appDispatch}  user={userProfileState}/>
   )
 }
 export default IndexPage

@@ -3,6 +3,7 @@ import { useRouter, NextRouter } from 'next/router';
 import RegisterPage from '../components/pages/register';
 import { useEffect } from 'react';
 import { IPageProps } from '../components/PropInterfaces';
+import { userProfileState } from '../reducers/initialStates';
 
 
 export default function(props: IPageProps){
@@ -16,6 +17,7 @@ export default function(props: IPageProps){
         router={router} 
         appState={appState}  
         appDispatch={appDispatch}
+        user={userProfileState}
         />
     )
 }
